@@ -84,15 +84,17 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="245" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9ZQ-HS-aJO">
-                                <rect key="frame" x="20" y="20" width="374" height="250"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="245" keyboardDismissMode="onDrag" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9ZQ-HS-aJO">
+                                <rect key="frame" x="20" y="20" width="374" height="750"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="ttg-ta-idP"/>
-                                </constraints>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="delegate" destination="j4G-N4-R5I" id="dn7-dN-GGC"/>
                                 </connections>
@@ -100,12 +102,13 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="9ZQ-HS-aJO" firstAttribute="top" secondItem="kjP-IB-NPE" secondAttribute="top" constant="20" id="1Dx-5p-miS"/>
+                            <constraint firstItem="kjP-IB-NPE" firstAttribute="trailing" secondItem="9ZQ-HS-aJO" secondAttribute="trailing" constant="20" id="9Qf-Pk-yva"/>
                             <constraint firstItem="aCd-O1-1cl" firstAttribute="bottom" secondItem="2cY-MH-cwj" secondAttribute="bottomMargin" id="EO7-nh-L80"/>
                             <constraint firstItem="kjP-IB-NPE" firstAttribute="trailing" secondItem="aCd-O1-1cl" secondAttribute="trailing" constant="20" id="Iij-yu-V2a"/>
-                            <constraint firstItem="kjP-IB-NPE" firstAttribute="trailing" secondItem="9ZQ-HS-aJO" secondAttribute="trailing" constant="20" id="RKI-ca-CoR"/>
-                            <constraint firstItem="9ZQ-HS-aJO" firstAttribute="top" secondItem="kjP-IB-NPE" secondAttribute="top" constant="20" id="bET-S8-HbJ"/>
+                            <constraint firstItem="9ZQ-HS-aJO" firstAttribute="leading" secondItem="kjP-IB-NPE" secondAttribute="leading" constant="20" id="ht4-X2-6iX"/>
+                            <constraint firstItem="aCd-O1-1cl" firstAttribute="top" secondItem="9ZQ-HS-aJO" secondAttribute="bottom" constant="8" id="mTc-DU-2tP"/>
                             <constraint firstItem="aCd-O1-1cl" firstAttribute="leading" secondItem="kjP-IB-NPE" secondAttribute="leading" constant="20" id="mcX-7h-iWX"/>
-                            <constraint firstItem="9ZQ-HS-aJO" firstAttribute="leading" secondItem="kjP-IB-NPE" secondAttribute="leading" constant="20" id="uJi-Cw-X5s"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kjP-IB-NPE"/>
                     </view>

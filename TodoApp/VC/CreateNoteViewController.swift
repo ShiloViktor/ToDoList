@@ -43,7 +43,6 @@ class CreateNoteViewController: UIViewController {
 
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear(sender:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         
-         NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidAppear(sender:)), name: UIResponder.keyboardDidHideNotification, object: nil)
          NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidAppear(sender:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
