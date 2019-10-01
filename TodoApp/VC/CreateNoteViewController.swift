@@ -44,10 +44,14 @@ class CreateNoteViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear(sender:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         
          NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidAppear(sender:)), name: UIResponder.keyboardDidHideNotification, object: nil)
+         NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidAppear(sender:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     @objc
       func keyboardWillAppear(sender: Notification) {
+        guard bottomConstraint.constant == 0 else {
+            return
+        }
           guard let keyboardHeight = sender.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else {return}
           let height = keyboardHeight.cgRectValue.height
           bottomConstraint.constant -= height
